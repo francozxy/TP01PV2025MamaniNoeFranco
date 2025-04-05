@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de contacto</title>
+</head>
+<body>
+    <form onsubmit="enviarFormulario(event)">
+        <input type="text" id="nombre" placeholder="INGRESE SU NOMBRE">
+        <input type="text" id="apellido" placeholder="INGRESE SU APELLIDO">
+        <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <script>
+        function enviarFormulario(event) {
+            event.preventDefault();
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            alert("Mensaje enviado!\n\nNombre: " + nombre + "\nApellido: " + apellido);
+        }
+    </script>
+</body>
+</html>
